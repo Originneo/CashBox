@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		524F7C31B2B4F1132E0CE8E8 /* Pods_AOCashBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50FCD9EF8A945D976C65862 /* Pods_AOCashBoxTests.framework */; };
 		5B97666822DF5733005EF92B /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97666722DF5733005EF92B /* RegistrationViewController.m */; };
 		5B97666E22DF6219005EF92B /* AOTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97666D22DF6219005EF92B /* AOTextFieldView.m */; };
 		5B97667422DF826B005EF92B /* AOButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B97667322DF826B005EF92B /* AOButtonView.m */; };
@@ -31,8 +30,6 @@
 		5BF9A0F122C7A41D00E91349 /* AOCashBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */; };
 		5BF9A0FC22C7A41D00E91349 /* AOCashBoxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */; };
 		5BF9A1A822CFA28000E91349 /* AutorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A1A722CFA28000E91349 /* AutorizationViewController.m */; };
-		A5480D05EF5BEFBB7E4476E4 /* Pods_AOCashBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC17485ECCF4D7677D47841F /* Pods_AOCashBox.framework */; };
-		E8E6EDFD533791F5B5C01C3F /* Pods_AOCashBoxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F7EEF1E51DD1FC0AFE984A /* Pods_AOCashBoxUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F7EEF1E51DD1FC0AFE984A /* Pods_AOCashBoxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AOCashBoxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E847A9B43BF4F6BA4EA7AE /* Pods-AOCashBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-AOCashBoxTests/Pods-AOCashBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		46514A6381E55C61E771DCA7 /* Pods-AOCashBoxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBoxUITests.debug.xcconfig"; path = "Target Support Files/Pods-AOCashBoxUITests/Pods-AOCashBoxUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5A401E32E24583F7E76F7C8A /* Pods-AOCashBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBox.debug.xcconfig"; path = "Target Support Files/Pods-AOCashBox/Pods-AOCashBox.debug.xcconfig"; sourceTree = "<group>"; };
 		5B97666622DF5733005EF92B /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		5B97666722DF5733005EF92B /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		5B97666C22DF6219005EF92B /* AOTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOTextFieldView.h; sourceTree = "<group>"; };
@@ -87,7 +80,6 @@
 		5B9766F022E715C9005EF92B /* AOProductData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AOProductData.xcdatamodel; sourceTree = "<group>"; };
 		5B9766F222E7228F005EF92B /* CoreDataStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		5B9766F322E7228F005EF92B /* CoreDataStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		5BF9A0D422C7A41B00E91349 /* AOCashBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOCashBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9A0D722C7A41B00E91349 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BF9A0D822C7A41B00E91349 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BF9A0DA22C7A41B00E91349 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -95,19 +87,15 @@
 		5BF9A0E322C7A41D00E91349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF9A0E522C7A41D00E91349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF9A0E622C7A41D00E91349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BF9A0EC22C7A41D00E91349 /* AOCashBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOCashBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOCashBoxTests.m; sourceTree = "<group>"; };
 		5BF9A0F222C7A41D00E91349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BF9A0F722C7A41D00E91349 /* AOCashBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOCashBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOCashBoxUITests.m; sourceTree = "<group>"; };
 		5BF9A0FD22C7A41D00E91349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF9A1A622CFA28000E91349 /* AutorizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutorizationViewController.h; sourceTree = "<group>"; };
 		5BF9A1A722CFA28000E91349 /* AutorizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutorizationViewController.m; sourceTree = "<group>"; };
-		7D0E146D2F151DF66EA7B49C /* Pods-AOCashBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBoxTests.release.xcconfig"; path = "Target Support Files/Pods-AOCashBoxTests/Pods-AOCashBoxTests.release.xcconfig"; sourceTree = "<group>"; };
-		AF198E85CEED4024D8B41AE9 /* Pods-AOCashBoxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBoxUITests.release.xcconfig"; path = "Target Support Files/Pods-AOCashBoxUITests/Pods-AOCashBoxUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C50FCD9EF8A945D976C65862 /* Pods_AOCashBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AOCashBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC17485ECCF4D7677D47841F /* Pods_AOCashBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AOCashBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D9194DFFC444AA1B4286A3 /* Pods-AOCashBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOCashBox.release.xcconfig"; path = "Target Support Files/Pods-AOCashBox/Pods-AOCashBox.release.xcconfig"; sourceTree = "<group>"; };
+		5BF9A6FD22E8C2230012485B /* AOCashBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AOCashBoxUITests.xctest; path = "/Users/kamilavalieva/Desktop/SberIos/CashBox/AOCashBox/build/Debug-iphoneos/AOCashBoxUITests.xctest"; sourceTree = "<absolute>"; };
+		5BF9A6FE22E8C2230012485B /* AOCashBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AOCashBoxTests.xctest; path = "/Users/kamilavalieva/Desktop/SberIos/CashBox/AOCashBox/build/Debug-iphoneos/AOCashBoxTests.xctest"; sourceTree = "<absolute>"; };
+		5BF9A70022E8C2F50012485B /* AOCashBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOCashBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5480D05EF5BEFBB7E4476E4 /* Pods_AOCashBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524F7C31B2B4F1132E0CE8E8 /* Pods_AOCashBoxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E6EDFD533791F5B5C01C3F /* Pods_AOCashBoxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,20 +223,8 @@
 				5BF9A0D622C7A41B00E91349 /* AOCashBox */,
 				5BF9A0EF22C7A41D00E91349 /* AOCashBoxTests */,
 				5BF9A0FA22C7A41D00E91349 /* AOCashBoxUITests */,
-				5BF9A0D522C7A41B00E91349 /* Products */,
-				812D4CDD114595C8B2B8A1F3 /* Pods */,
-				F2502E25F76E725694DB5D3F /* Frameworks */,
+				5BF9A70022E8C2F50012485B /* AOCashBox.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5BF9A0D522C7A41B00E91349 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5BF9A0D422C7A41B00E91349 /* AOCashBox.app */,
-				5BF9A0EC22C7A41D00E91349 /* AOCashBoxTests.xctest */,
-				5BF9A0F722C7A41D00E91349 /* AOCashBoxUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5BF9A0D622C7A41B00E91349 /* AOCashBox */ = {
@@ -288,30 +261,6 @@
 			path = AOCashBoxUITests;
 			sourceTree = "<group>";
 		};
-		812D4CDD114595C8B2B8A1F3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5A401E32E24583F7E76F7C8A /* Pods-AOCashBox.debug.xcconfig */,
-				E8D9194DFFC444AA1B4286A3 /* Pods-AOCashBox.release.xcconfig */,
-				23E847A9B43BF4F6BA4EA7AE /* Pods-AOCashBoxTests.debug.xcconfig */,
-				7D0E146D2F151DF66EA7B49C /* Pods-AOCashBoxTests.release.xcconfig */,
-				46514A6381E55C61E771DCA7 /* Pods-AOCashBoxUITests.debug.xcconfig */,
-				AF198E85CEED4024D8B41AE9 /* Pods-AOCashBoxUITests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		F2502E25F76E725694DB5D3F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DC17485ECCF4D7677D47841F /* Pods_AOCashBox.framework */,
-				C50FCD9EF8A945D976C65862 /* Pods_AOCashBoxTests.framework */,
-				00F7EEF1E51DD1FC0AFE984A /* Pods_AOCashBoxUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,7 +268,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BF9A10022C7A41D00E91349 /* Build configuration list for PBXNativeTarget "AOCashBox" */;
 			buildPhases = (
-				6DB7F47654F52A226BF75E46 /* [CP] Check Pods Manifest.lock */,
 				5BF9A0D022C7A41B00E91349 /* Sources */,
 				5BF9A0D122C7A41B00E91349 /* Frameworks */,
 				5BF9A0D222C7A41B00E91349 /* Resources */,
@@ -330,7 +278,7 @@
 			);
 			name = AOCashBox;
 			productName = AOCashBox;
-			productReference = 5BF9A0D422C7A41B00E91349 /* AOCashBox.app */;
+			productReference = 5BF9A70022E8C2F50012485B /* AOCashBox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5BF9A0EB22C7A41D00E91349 /* AOCashBoxTests */ = {
@@ -349,7 +297,7 @@
 			);
 			name = AOCashBoxTests;
 			productName = AOCashBoxTests;
-			productReference = 5BF9A0EC22C7A41D00E91349 /* AOCashBoxTests.xctest */;
+			productReference = 5BF9A6FE22E8C2230012485B /* AOCashBoxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5BF9A0F622C7A41D00E91349 /* AOCashBoxUITests */ = {
@@ -368,7 +316,7 @@
 			);
 			name = AOCashBoxUITests;
 			productName = AOCashBoxUITests;
-			productReference = 5BF9A0F722C7A41D00E91349 /* AOCashBoxUITests.xctest */;
+			productReference = 5BF9A6FD22E8C2230012485B /* AOCashBoxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -402,7 +350,7 @@
 				Base,
 			);
 			mainGroup = 5BF9A0CB22C7A41B00E91349;
-			productRefGroup = 5BF9A0D522C7A41B00E91349 /* Products */;
+			productRefGroup = 5BF9A0CB22C7A41B00E91349;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -440,28 +388,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6DB7F47654F52A226BF75E46 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AOCashBox-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8FA301CA80477A2E95DD131F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -692,17 +618,13 @@
 		};
 		5BF9A10122C7A41D00E91349 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A401E32E24583F7E76F7C8A /* Pods-AOCashBox.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42S2F4GCL3;
 				INFOPLIST_FILE = AOCashBox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Sber.AOCashBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -711,17 +633,13 @@
 		};
 		5BF9A10222C7A41D00E91349 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8D9194DFFC444AA1B4286A3 /* Pods-AOCashBox.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42S2F4GCL3;
 				INFOPLIST_FILE = AOCashBox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Sber.AOCashBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -730,7 +648,6 @@
 		};
 		5BF9A10422C7A41D00E91349 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23E847A9B43BF4F6BA4EA7AE /* Pods-AOCashBoxTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -750,7 +667,6 @@
 		};
 		5BF9A10522C7A41D00E91349 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D0E146D2F151DF66EA7B49C /* Pods-AOCashBoxTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -770,7 +686,6 @@
 		};
 		5BF9A10722C7A41D00E91349 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46514A6381E55C61E771DCA7 /* Pods-AOCashBoxUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42S2F4GCL3;
@@ -789,7 +704,6 @@
 		};
 		5BF9A10822C7A41D00E91349 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF198E85CEED4024D8B41AE9 /* Pods-AOCashBoxUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42S2F4GCL3;

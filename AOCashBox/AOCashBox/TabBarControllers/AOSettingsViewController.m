@@ -22,8 +22,10 @@
     [self.view addSubview:self.buttonLogOut];
     [self makeConstraints];
     [self.buttonLogOut addTarget:self action:@selector(AObuttonLogOut) forControlEvents:UIControlEventTouchUpInside];
-    // Do any additional setup after loading the view.
 }
+
+#pragma mark -makeConstraints
+
 -(void)makeConstraints
 {
     [self.buttonLogOut.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
@@ -32,12 +34,11 @@
     [self.buttonLogOut.heightAnchor constraintEqualToConstant:40].active = YES;
 }
 
--(void)AObuttonLogOut
+-(void)AObuttonLogOut /*Выход из приложения*/
 {   AOCoordinateViewController *coord = [AOCoordinateViewController new];
     NSUserDefaults *defaults = [NSUserDefaults new];
         [defaults removeObjectForKey:@"loggedin"];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
     [self presentViewController:coord.navcon animated:YES completion:nil];
 }
 

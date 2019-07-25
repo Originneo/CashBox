@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CoreDataStack : NSObject
 
-@property(nonatomic,strong) NSPersistentContainer *container;
+@property(nonatomic,strong) NSPersistentContainer *container; //Создаем контейнер для КОРДАТЫ
 
 +(instancetype) shared;
 

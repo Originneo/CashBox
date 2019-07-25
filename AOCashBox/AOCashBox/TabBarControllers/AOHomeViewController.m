@@ -40,7 +40,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     
     NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:7];
     
-    for (NSInteger tableViewRow = 0; tableViewRow < 7; tableViewRow++)
+    for (NSInteger tableViewRow = 0; tableViewRow < 7; tableViewRow++) //Создаем разноцветные ячейки
     {
         NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:numberOfCollectionViewCells];
         
@@ -60,7 +60,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     self.colorArray = [NSArray arrayWithArray:mutableArray];
     
 }
--(void)downloadHomeViewControllerData
+-(void)downloadHomeViewControllerData //Подписываемся на делегат и вызываем метод
 {
     NetworkService *networkService = [NetworkService new];
     networkService.output = self;
@@ -120,7 +120,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     cell.layer.borderColor = collectionViewArray[indexPath.item].CGColor;
     cell.layer.borderWidth = 2.5f;
     
-    if (indexPath.item < self.shopModelArray.count)
+    if (indexPath.item < self.shopModelArray.count) //Заполняем ячейки Collection View и прописываем активацию спинера при загрузке фото
     {
         AOShopModel *shop = self.shopModelArray[indexPath.item];
         UIImage *image = [UIImage imageWithData:shop.shopImage];
@@ -152,9 +152,9 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     return headerView;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath //Обрабатываем переход по картинке
 {
-    AOCustomCollectionViewCell *cell = (AOCustomCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    AOCustomCollectionViewCell *cell = (AOCustomCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     if (cell.imageView.image != nil)
     {
         AODetailsViewController *detailsVC = [AODetailsViewController new];
@@ -166,7 +166,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
         [self.navigationController pushViewController:detailsVC animated:YES];
     }
 }
--(void)loadingIsDoneWithDataRecieved:(AOShopModel *)dataRecieved
+-(void)loadingIsDoneWithDataRecieved:(AOShopModel *)dataRecieved //Загружаем данные из полученные данных
 {
     if (!self.shopModelArray) {
         self.shopModelArray = [NSMutableArray new];

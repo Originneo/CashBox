@@ -10,12 +10,15 @@
 NS_ASSUME_NONNULL_BEGIN
 @import CoreData;
 
-@interface AOProductModel : NSManagedObject
+@interface AOProductModel : NSManagedObject //Создаем управляем объект для корДаты
+
 @property(nonatomic,copy)NSString *productName;
 @property(nonatomic,assign)NSInteger cost;
 @property(nonatomic,strong)UIImage *productImage;
 @property(nonatomic,strong)NSString *date;
+
 -(NSDictionary *)generateDictProducts;
+
 @end
 
 NS_ASSUME_NONNULL_END

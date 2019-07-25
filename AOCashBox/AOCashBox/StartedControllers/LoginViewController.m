@@ -71,6 +71,8 @@
     
 }
 
+#pragma mark -ButtonAction
+
 -(void)loginInHomePage
 {
     self.coord = [AOCoordinateViewController new];

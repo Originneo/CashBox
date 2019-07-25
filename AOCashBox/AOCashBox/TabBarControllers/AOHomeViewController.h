@@ -8,11 +8,12 @@
 #import <UIKit/UIKit.h>
 #import "AOShopModel.h"
 #import "NetworkServiceProtocol.h"
+#import "AOCustomCollectionView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AOHomeViewController : UITableViewController<UICollectionViewDelegate,UICollectionViewDataSource,NetworkServiceOutputProtocol>
 
-@property(nonatomic,strong)UICollectionView *collectionView;
+@property(nonatomic,strong)AOCustomCollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray<AOShopModel *> *shopModelArray;
 @end
 

@@ -45,7 +45,7 @@ static NSString const *TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
     [self makeConstraints];
 }
 
-- (void) write
+- (void) write //Обрабатываем запись в контекст
 {
     [self.context performBlock:^{
 
@@ -64,7 +64,7 @@ static NSString const *TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
     }];
 }
 
-- (void) read
+- (void) read //Читаем из контекста
 {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"ProductModel"];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
@@ -78,7 +78,8 @@ static NSString const *TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
     
 }
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath { //Записываем информацию из resultController в ячейки
     AOCustomHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     AOProductModel *model = [self.resultController objectAtIndexPath:indexPath];
     cell.price.text = [[NSString alloc] initWithFormat:@"%li рублей",model.cost];
@@ -98,7 +99,7 @@ static NSString const *TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
 {
     return [self.resultController sections].count;
 }
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section //Обрабатываем вид хэдера таблица
 {
     UIView *headerView = [[UIView alloc]init];
     headerView.backgroundColor =  UIColor.whiteColor;

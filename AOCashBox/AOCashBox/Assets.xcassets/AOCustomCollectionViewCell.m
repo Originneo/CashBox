@@ -34,7 +34,7 @@
 }
 
 
-- (void)prepareForReuse
+- (void)prepareForReuse //Подготавливаем ячейки для переиспользования
 {
     self.imageView.image = nil;
     

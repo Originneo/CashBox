@@ -11,48 +11,47 @@
 #import "AODetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AOHistoryViewController.h"
+#import "AOCustomCollectionViewCell.h"
+
 static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellIdentifier";
 @interface AOHomeViewController ()
 @property(nonatomic,copy)NSArray * arrayOfShops;
 @property (nonatomic, strong) NSArray *colorArray;
+
 @end
 
 @implementation AOHomeViewController
 
--(void)loadView
-{
-    [super loadView];
-
-    const NSInteger numberOfTableViewSections = 7;
-    const NSInteger numberOfCollectionViewCells = 7;
-
-    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:numberOfTableViewSections];
-
-    for (NSInteger tableViewRow = 0; tableViewRow < numberOfTableViewSections; tableViewRow++)
-    {
-        NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:numberOfCollectionViewCells];
-
-        for (NSInteger collectionViewItem = 0; collectionViewItem < numberOfCollectionViewCells; collectionViewItem++)
-        {
-
-            CGFloat red = arc4random() % 255;
-            CGFloat green = arc4random() % 255;
-            CGFloat blue = arc4random() % 255;
-            UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0f];
-            [colorArray addObject:color];
-        }
-
-        [mutableArray addObject:colorArray];
-    }
-
-    self.colorArray = [NSArray arrayWithArray:mutableArray];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     self.arrayOfShops = @[@"Супермаркет",@"Десткий магазин",@"Магазин косметики",@"Алкогольные магазины"];
+    
+    const NSInteger numberOfTableViewSections = 7;
+    const NSInteger numberOfCollectionViewCells = 7;
+    
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:numberOfTableViewSections];
+    
+    for (NSInteger tableViewRow = 0; tableViewRow < numberOfTableViewSections; tableViewRow++)
+    {
+        NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:numberOfCollectionViewCells];
+        
+        for (NSInteger collectionViewItem = 0; collectionViewItem < numberOfCollectionViewCells; collectionViewItem++)
+        {
+            
+            CGFloat red = arc4random() % 255;
+            CGFloat green = arc4random() % 255;
+            CGFloat blue = arc4random() % 255;
+            UIColor *color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0f];
+            [colorArray addObject:color];
+        }
+        
+        [mutableArray addObject:colorArray];
+    }
+    
+    self.colorArray = [NSArray arrayWithArray:mutableArray];
 }
 
 
@@ -101,17 +100,15 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
+    AOCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
     cell.layer.masksToBounds = YES;
     cell.layer.cornerRadius = 19.f;
 
     NSArray<UIColor *> *collectionViewArray = self.colorArray[[(AOCustomCollectionView *)collectionView indexPath].section];
     cell.layer.borderColor = collectionViewArray[indexPath.item].CGColor;
     cell.layer.borderWidth = 2.5f;
-    
-    UIImageView *imgView = [UIImageView new];
-    imgView.image = [UIImage imageNamed:@"pyaterochka"];
-    cell.backgroundView =imgView;
+    AOShopModel* shop = self.shopModelArray[indexPath.row];
+    cell.imageView.image = [UIImage imageWithData:shop.shopImage];
     
     return cell;
 }
@@ -144,4 +141,6 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
 //    }
 
 }
+
+
 @end

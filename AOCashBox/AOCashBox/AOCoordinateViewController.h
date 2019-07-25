@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AOCoordinateViewController : UIViewController
+@interface AOCoordinateViewController : UIViewController<loginViewProtocol>
+
 @property(nonatomic, strong,readonly) UITabBarController* tabBar;
 @property(nonatomic,strong,readonly)UINavigationController* navcon;
 -(UIViewController*)chooseRootController;

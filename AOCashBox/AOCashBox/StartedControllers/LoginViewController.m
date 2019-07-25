@@ -10,12 +10,17 @@
 #import "AOTextFieldView.h"
 #import "AOButtonView.h"
 #import "AOCoordinateViewController.h"
+#import "AOShopModel.h"
+#import "NetworkService.h"
+
+
 
 @interface LoginViewController ()
 @property(nonatomic,strong) AOTextFieldView* textFieldLogin;
 @property(nonatomic,strong) AOTextFieldView* textFieldPassword;
 @property(nonatomic,strong)AOCoordinateViewController* coord;
 @property(nonatomic,strong)UIButton* loginButton;
+@property (nonatomic,strong)NSMutableArray<AOShopModel*> *shopModelArray;
 @end
 
 @implementation LoginViewController
@@ -24,9 +29,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:247/255. green:235/255. blue:245/255. alpha:1];
     [self setupUI];
-
+    [self downloadHomeViewControllerData];
 }
 
+-(void)downloadHomeViewControllerData
+{
+    NetworkService* networkService = [NetworkService new];
+    networkService.output = self;
+    [networkService takeAllDataShops];
+}
 -(void)setupUI
 {
     self.textFieldLogin = [[AOTextFieldView alloc]init];
@@ -120,4 +131,19 @@
     self.textFieldPassword.text = @"";
 }
 
+-(void)loadingIsDoneWithDataRecieved:(AOShopModel *)dataRecieved
+{
+    if (!self.shopModelArray) {
+        self.shopModelArray = [NSMutableArray new];
+    }
+    NSLog(@"%@",dataRecieved.shopName);
+    if (dataRecieved)
+    {
+        [self.shopModelArray addObject:dataRecieved];
+    }
+    if (self.shopModelArray.count == 7)
+    {
+        [self.delegate allDataofShopsIsReceived:self.shopModelArray];
+    }
+}
 @end

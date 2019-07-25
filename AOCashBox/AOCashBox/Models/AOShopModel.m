@@ -9,5 +9,12 @@
 #import "AOShopModel.h"
 
 @implementation AOShopModel
-
+- (instancetype)initWithShopName:(NSString*)shopName
+{
+    self = [super init];
+    if (self) {
+        _shopName = shopName;
+    }
+    return self;
+}
 @end

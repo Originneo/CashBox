@@ -15,15 +15,16 @@
 @property(nonatomic) UIBarStyle barStyle;
 @property(nonatomic, strong) UITabBarController* tabBar;
 @property(nonatomic,strong)UINavigationController* navcon;
+@property(nonatomic, strong)AOCoordinateViewController *coordinator;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    AOCoordinateViewController* coordinator = [AOCoordinateViewController new];
+    self.coordinator = [AOCoordinateViewController new];
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    self.window.rootViewController = [coordinator chooseRootController];
+    self.window.rootViewController = [self.coordinator chooseRootController];
     [self.window makeKeyAndVisible];
     return YES;
 }

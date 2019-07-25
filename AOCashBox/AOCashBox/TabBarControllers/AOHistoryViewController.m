@@ -26,7 +26,7 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
     [super viewDidLoad];
   //  AOProductModel* product = [AOProductModel new];
   //  [product generateDictProducts].allKeys;
-    
+    self.view.backgroundColor = UIColor.whiteColor;
     self.context = [CoreDataStack shared].container.newBackgroundContext;
     
     self.historyData = @[@"10-07-2019",@"11-07-2019",@"12-07-2019",@"13-07-2019",@"14-07-2019",@"15-07-2019",@"16-07-2019",@"17-07-2019"];
@@ -121,7 +121,7 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
     [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
     [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
-    [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [self.tableView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor].active = YES;
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

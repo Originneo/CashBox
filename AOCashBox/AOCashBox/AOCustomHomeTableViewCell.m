@@ -8,6 +8,7 @@
 
 #import "AOCustomHomeTableViewCell.h"
 #import "AOCustomCollectionView.h"
+#import "AOCustomCollectionViewCell.h"
 @interface AOCustomHomeTableViewCell()
 @end
 
@@ -22,7 +23,7 @@
         layout.itemSize = CGSizeMake(144, 180);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         _collectionView = [[AOCustomCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifier];
+        [_collectionView registerClass:[AOCustomCollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifier];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
         [self.contentView addSubview:_collectionView];

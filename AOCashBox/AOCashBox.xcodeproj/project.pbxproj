@@ -30,6 +30,9 @@
 		5BF9A0F122C7A41D00E91349 /* AOCashBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */; };
 		5BF9A0FC22C7A41D00E91349 /* AOCashBoxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */; };
 		5BF9A1A822CFA28000E91349 /* AutorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A1A722CFA28000E91349 /* AutorizationViewController.m */; };
+		5BF9A70322E9ADD60012485B /* AOCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A70222E9ADD60012485B /* AOCustomCollectionViewCell.m */; };
+		5BF9A70722E9C94A0012485B /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A70622E9C94A0012485B /* NetworkService.m */; };
+		5BF9A70A22E9CA790012485B /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A70922E9CA790012485B /* NetworkHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,13 @@
 		5BF9A6FD22E8C2230012485B /* AOCashBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AOCashBoxUITests.xctest; path = "/Users/kamilavalieva/Desktop/SberIos/CashBox/AOCashBox/build/Debug-iphoneos/AOCashBoxUITests.xctest"; sourceTree = "<absolute>"; };
 		5BF9A6FE22E8C2230012485B /* AOCashBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AOCashBoxTests.xctest; path = "/Users/kamilavalieva/Desktop/SberIos/CashBox/AOCashBox/build/Debug-iphoneos/AOCashBoxTests.xctest"; sourceTree = "<absolute>"; };
 		5BF9A70022E8C2F50012485B /* AOCashBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOCashBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF9A70122E9ADD60012485B /* AOCustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AOCustomCollectionViewCell.h; path = Assets.xcassets/AOCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		5BF9A70222E9ADD60012485B /* AOCustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AOCustomCollectionViewCell.m; path = Assets.xcassets/AOCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		5BF9A70422E9C82D0012485B /* NetworkServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkServiceProtocol.h; sourceTree = "<group>"; };
+		5BF9A70522E9C94A0012485B /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		5BF9A70622E9C94A0012485B /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		5BF9A70822E9CA790012485B /* NetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		5BF9A70922E9CA790012485B /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,11 @@
 		5B0B1B5522DF4D8C0000DF7C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5BF9A70422E9C82D0012485B /* NetworkServiceProtocol.h */,
+				5BF9A70522E9C94A0012485B /* NetworkService.h */,
+				5BF9A70622E9C94A0012485B /* NetworkService.m */,
+				5BF9A70822E9CA790012485B /* NetworkHelper.h */,
+				5BF9A70922E9CA790012485B /* NetworkHelper.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -157,6 +172,8 @@
 				5B97669C22E5ED58005EF92B /* AOCustomHistoryTableViewCell.m */,
 				5B97669322E4B680005EF92B /* AOCustomCollectionView.h */,
 				5B97669422E4B680005EF92B /* AOCustomCollectionView.m */,
+				5BF9A70122E9ADD60012485B /* AOCustomCollectionViewCell.h */,
+				5BF9A70222E9ADD60012485B /* AOCustomCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -439,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF9A70A22E9CA790012485B /* NetworkHelper.m in Sources */,
 				5B97668122E09AC2005EF92B /* AOSettingsViewController.m in Sources */,
 				5B9766A622E5EE4B005EF92B /* AOProductModel.m in Sources */,
 				5B9766A322E5EE36005EF92B /* AOShopModel.m in Sources */,
@@ -448,6 +466,7 @@
 				5B97667722E09763005EF92B /* AOHomeViewController.m in Sources */,
 				5B97666E22DF6219005EF92B /* AOTextFieldView.m in Sources */,
 				5BF9A0DC22C7A41B00E91349 /* LoginViewController.m in Sources */,
+				5BF9A70322E9ADD60012485B /* AOCustomCollectionViewCell.m in Sources */,
 				5B97667B22E09AA6005EF92B /* AOHistoryViewController.m in Sources */,
 				5B97669A22E5E016005EF92B /* AODetailsViewController.m in Sources */,
 				5B97668F22E34E9E005EF92B /* AOCustomHomeTableViewCell.m in Sources */,
@@ -457,6 +476,7 @@
 				5BF9A0D922C7A41B00E91349 /* AppDelegate.m in Sources */,
 				5B9766F122E715C9005EF92B /* AOProductData.xcdatamodeld in Sources */,
 				5B97666822DF5733005EF92B /* RegistrationViewController.m in Sources */,
+				5BF9A70722E9C94A0012485B /* NetworkService.m in Sources */,
 				5B97668722E0BEBF005EF92B /* AOCoordinateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CoreDataStack : NSObject
 
 @property(nonatomic,strong) NSPersistentContainer *container;
-
 +(instancetype) shared;
+
 @end
 
 NS_ASSUME_NONNULL_END

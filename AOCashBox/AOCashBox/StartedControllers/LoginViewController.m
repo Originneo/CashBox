@@ -11,7 +11,7 @@
 #import "AOButtonView.h"
 #import "AOCoordinateViewController.h"
 
-@interface LoginViewController ()<UITextFieldDelegate>
+@interface LoginViewController ()
 @property(nonatomic,strong) AOTextFieldView* textFieldLogin;
 @property(nonatomic,strong) AOTextFieldView* textFieldPassword;
 @property(nonatomic,strong)AOCoordinateViewController* coord;
@@ -37,8 +37,6 @@
     self.textFieldPassword.placeholder = @"Пароль";
     self.textFieldLogin.placeholder = @"Логин";
     self.textFieldPassword.secureTextEntry = YES;
-    self.textFieldPassword.delegate = self;
-    self.textFieldLogin.delegate = self;
     //LoginButton
     
     self.loginButton = [[AOButtonView alloc]initWithTitle:@"Войти"];
@@ -72,7 +70,8 @@
 -(void)loginInHomePage
 {
     self.coord = [AOCoordinateViewController new];
-    if ([self.textFieldLogin.text isEqualToString: @"Admin"] && [self.textFieldPassword.text isEqualToString :@"admin"]) {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if (self.textFieldLogin.text == [defaults objectForKey:@"login"] && self.textFieldPassword.text == [defaults objectForKey:@"password"]) {
         UIAlertController * alert = [UIAlertController
                                      alertControllerWithTitle:@"Correct Password"
                                      message:@"Correct Password!"
@@ -83,8 +82,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             [alert dismissViewControllerAnimated:YES completion:^{
-                NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-                [defaults setObject:self.textFieldLogin.text forKey:self.textFieldPassword.text];
+            [defaults setObject:@(1) forKey:@"loggedin"];
                 dispatch_async(dispatch_get_main_queue(), ^{
                 
                 

@@ -82,7 +82,7 @@ const CGFloat kBarHeight = 50;
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     self.loginViewController = [LoginViewController new];
-    if ([defaults objectForKey:@"admin"])
+    if ([defaults objectForKey:@"loggedin"])
     {
         return self.tabBar;
     }

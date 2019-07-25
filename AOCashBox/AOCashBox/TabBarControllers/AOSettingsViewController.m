@@ -35,7 +35,7 @@
 -(void)AObuttonLogOut
 {   AOCoordinateViewController* coord = [AOCoordinateViewController new];
     NSUserDefaults* defaults = [NSUserDefaults new];
-        [defaults removeObjectForKey:@"admin"];
+        [defaults removeObjectForKey:@"loggedin"];
     [self dismissViewControllerAnimated:YES completion:nil];
     
     [self presentViewController:coord.navcon animated:YES completion:nil];

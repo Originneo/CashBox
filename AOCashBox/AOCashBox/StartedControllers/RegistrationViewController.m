@@ -13,11 +13,11 @@
 #import "AOCoordinateViewController.h"
 
 @interface RegistrationViewController ()<UITextFieldDelegate>
-@property(nonatomic,strong) AOTextFieldView* textFieldLogin;
-@property(nonatomic,strong) AOTextFieldView* textFieldPassword;
-@property(nonatomic,strong) AOTextFieldView* textFieldRepeatPassword;
-@property(nonatomic,strong)AOCoordinateViewController* coord;
-@property(nonatomic,strong)UIButton* loginButton;
+@property(nonatomic,strong) AOTextFieldView *textFieldLogin;
+@property(nonatomic,strong) AOTextFieldView *textFieldPassword;
+@property(nonatomic,strong) AOTextFieldView *textFieldRepeatPassword;
+@property(nonatomic,strong)AOCoordinateViewController *coord;
+@property(nonatomic,strong)UIButton *loginButton;
 @end
 
 @implementation RegistrationViewController
@@ -83,10 +83,10 @@
 -(void)moveToLogin
 {
     if (self.textFieldPassword.text == self.textFieldRepeatPassword.text && ![self.textFieldLogin.text isEqualToString: @""]) {
-        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:self.textFieldLogin.text forKey:@"login"];
         [defaults setObject:self.textFieldPassword.text forKey:@"password"];
-        LoginViewController* loginViewController = [LoginViewController new];
+        LoginViewController *loginViewController = [LoginViewController new];
         [self.navigationController pushViewController:loginViewController animated:YES ];
     }
 }

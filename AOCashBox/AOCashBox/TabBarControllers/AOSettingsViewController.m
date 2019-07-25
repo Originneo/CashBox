@@ -10,7 +10,7 @@
 #import "AOButtonView.h"
 #import "AOCoordinateViewController.h"
 @interface AOSettingsViewController ()
-@property(nonatomic,strong)AOButtonView* buttonLogOut;
+@property(nonatomic,strong)AOButtonView *buttonLogOut;
 @end
 
 @implementation AOSettingsViewController
@@ -33,8 +33,8 @@
 }
 
 -(void)AObuttonLogOut
-{   AOCoordinateViewController* coord = [AOCoordinateViewController new];
-    NSUserDefaults* defaults = [NSUserDefaults new];
+{   AOCoordinateViewController *coord = [AOCoordinateViewController new];
+    NSUserDefaults *defaults = [NSUserDefaults new];
         [defaults removeObjectForKey:@"loggedin"];
     [self dismissViewControllerAnimated:YES completion:nil];
     

@@ -15,7 +15,7 @@
 @dynamic productImage;
 @dynamic date;
 
--(NSDictionary*)generateDictProducts
+-(NSDictionary *)generateDictProducts
 {
     NSDictionary *dictionary = @{
                                  @"Колбаса" : [UIImage imageNamed:@"колбаса"],

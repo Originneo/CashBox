@@ -11,9 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AOCustomHomeTableViewCell : UITableViewCell
-@property (nonatomic, strong)AOCustomCollectionView* collectionView;
+
+@property (nonatomic, strong)AOCustomCollectionView *collectionView;
 
 -(void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)dataSourceDelegate indexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

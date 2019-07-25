@@ -11,11 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AOCoordinateViewController : UIViewController<loginViewProtocol>
+@interface AOCoordinateViewController : UIViewController
 
-@property(nonatomic, strong,readonly) UITabBarController* tabBar;
-@property(nonatomic,strong,readonly)UINavigationController* navcon;
--(UIViewController*)chooseRootController;
+@property(nonatomic, strong,readonly) UITabBarController *tabBar;
+@property(nonatomic,strong,readonly)UINavigationController *navcon;
+-(UIViewController *)chooseRootController;
 
 @end
 

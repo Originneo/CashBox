@@ -28,7 +28,7 @@
     [sessionConfiguration setAllowsCellularAccess:YES];
     if (params)
     {
-        [sessionConfiguration setHTTPAdditionalHeaders:params];//@{ @"Accept" : @"application/json" }];
+        [sessionConfiguration setHTTPAdditionalHeaders:params];
     }
     else
     {
@@ -68,30 +68,22 @@
                 NSString *url = dict[typeofshop][@"url"];
                 NSString *count = dict[typeofshop][@"count"];
                 NSString *type = dict[typeofshop][@"type"];
-                AOShopModel* shopModel = [[AOShopModel alloc]initWithShopName:name];
+                AOShopModel *shopModel = [[AOShopModel alloc]initWithShopName:name];
                 shopModel.URLofImage = url;
                 shopModel.count = count;
                 shopModel.typeOfShop = type;
-                //[resultArray addObject:shopModel];
                 
-                NSURL* url1 = [NSURL URLWithString:url];
-//                NSData *data = [NSData dataWithContentsOfURL:url1];
+                NSURL *realUrl = [NSURL URLWithString:url];
                 NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-                [[session dataTaskWithURL:url1 completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                [[session dataTaskWithURL:realUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                     shopModel.shopImage = data;
                     dispatch_async(dispatch_get_main_queue(), ^{
                             [self.output loadingIsDoneWithDataRecieved:shopModel];
                     });
                 }] resume];
             }
-        }        
-
-//
-           
-            
         }
-        
-        
+    }
     }];
     [sessionDataTask resume];
 }

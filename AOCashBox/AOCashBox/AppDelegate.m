@@ -13,8 +13,8 @@
 @interface AppDelegate ()
 
 @property(nonatomic) UIBarStyle barStyle;
-@property(nonatomic, strong) UITabBarController* tabBar;
-@property(nonatomic,strong)UINavigationController* navcon;
+@property(nonatomic, strong) UITabBarController *tabBar;
+@property(nonatomic,strong)UINavigationController *navcon;
 @property(nonatomic, strong)AOCoordinateViewController *coordinator;
 
 @end

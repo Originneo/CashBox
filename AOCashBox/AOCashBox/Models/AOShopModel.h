@@ -11,13 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AOShopModel : NSObject
-@property(nonatomic,strong)NSData* shopImage;
-@property(nonatomic,copy)NSString* shopName;
+
+@property(nonatomic,strong)NSData *shopImage;
+@property(nonatomic,copy)NSString *shopName;
 @property(nonatomic,copy)NSString *count;
 @property(nonatomic,copy)NSString *URLofImage;
 @property(nonatomic,copy)NSString *typeOfShop;
 
-- (instancetype)initWithShopName:(NSString*)shopName; 
+- (instancetype)initWithShopName:(NSString *)shopName; 
 
 @end
 

@@ -11,10 +11,9 @@
 #import "RegistrationViewController.h"
 #import "AOButtonView.h"
 @interface AutorizationViewController ()
-@property(nonatomic,strong)UIView* view1;
-@property(nonatomic,strong)UILabel* label;
-@property(nonatomic,strong)UIButton* loginButton;
-@property(nonatomic,strong)UIButton* registerButton;
+@property(nonatomic,strong)UILabel *label;
+@property(nonatomic,strong)UIButton *loginButton;
+@property(nonatomic,strong)UIButton *registerButton;
 @property(nonatomic,strong)UIView *strangeView;
 
 @end
@@ -51,7 +50,7 @@
     self.registerButton = [[AOButtonView alloc]initWithTitle:@"Зарегистрироваться"];
     [self.registerButton addTarget:self action:@selector(enterRegisterButton) forControlEvents:UIControlEventTouchUpInside];
 
-    //херня в центре экрана
+    //небольшая анимация в центре экрана
 
     self.strangeView = [UIView new];
     self.strangeView.frame = CGRectMake(0, 40,40,40);

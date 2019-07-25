@@ -11,9 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AOCustomCollectionViewCell : UICollectionViewCell
+
 @property (nonatomic,strong) UIImageView *imageView;
 @property (nonatomic,strong) UIActivityIndicatorView *spinner;
+
 - (instancetype) initWithFrame:(CGRect)frame;
+
 @end
 
 NS_ASSUME_NONNULL_END

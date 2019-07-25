@@ -10,12 +10,12 @@
 #import "AOCustomHistoryTableViewCell.h"
 #import "AOProductModel.h"
 #import "CoreDataStack.h"
-static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdentifier";
+static NSString const *TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdentifier";
 @import CoreData;
 @interface AOHistoryViewController ()
-@property(nonatomic,strong)UITableView* tableView;
+@property(nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong) NSManagedObjectContext *context;
-@property (nonatomic,strong)NSArray<NSString*> *historyData;
+@property (nonatomic,strong)NSArray<NSString *> *historyData;
 @property(nonatomic,strong)NSFetchedResultsController *resultController;
 @end
 
@@ -24,8 +24,6 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  //  AOProductModel* product = [AOProductModel new];
-  //  [product generateDictProducts].allKeys;
     self.view.backgroundColor = UIColor.whiteColor;
     self.context = [CoreDataStack shared].container.newBackgroundContext;
     
@@ -54,7 +52,7 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
         for (NSInteger index = 0; index < 100; index ++)
         {
             AOProductModel *object = [[AOProductModel alloc] initWithContext:self.context];
-            NSDictionary* dictionary = [object generateDictProducts];
+            NSDictionary *dictionary = [object generateDictProducts];
             object.cost = arc4random() % 999 + 150;
             object.date = self.historyData[arc4random() % 8];
             object.productName = dictionary.allKeys[arc4random() % dictionary.count];
@@ -81,8 +79,8 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    AOCustomHistoryTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
-    AOProductModel* model = [self.resultController objectAtIndexPath:indexPath];
+    AOCustomHistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    AOProductModel *model = [self.resultController objectAtIndexPath:indexPath];
     cell.price.text = [[NSString alloc] initWithFormat:@"%li рублей",model.cost];
     cell.label.text = model.productName;
     cell.customImageView.image = model.productImage;
@@ -102,10 +100,10 @@ static NSString* const TableViewReuseIdentifier = @"AOHistoryTableViewReuseIdent
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView* headerView = [[UIView alloc]init];
+    UIView *headerView = [[UIView alloc]init];
     headerView.backgroundColor =  UIColor.whiteColor;
     headerView.tintColor = UIColor.blackColor;
-    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
     [label setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Bold" size:17]];
     [label setText:[self.resultController sections][section].name];
     [headerView addSubview:label];

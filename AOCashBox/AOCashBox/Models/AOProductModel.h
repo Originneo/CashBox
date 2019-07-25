@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)NSInteger cost;
 @property(nonatomic,strong)UIImage *productImage;
 @property(nonatomic,strong)NSString *date;
--(NSDictionary*)generateDictProducts;
+-(NSDictionary *)generateDictProducts;
 @end
 
 NS_ASSUME_NONNULL_END

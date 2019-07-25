@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AOButtonView : UIButton
-@property(nonatomic,strong,readonly)NSString* title;
+
+@property(nonatomic,strong,readonly)NSString *title;
+
 - (instancetype)initWithTitle:(NSString *)title;
 
 @end

@@ -9,8 +9,6 @@
 #import "AOCustomHomeTableViewCell.h"
 #import "AOCustomCollectionView.h"
 #import "AOCustomCollectionViewCell.h"
-@interface AOCustomHomeTableViewCell()
-@end
 
 @implementation AOCustomHomeTableViewCell
 
@@ -34,7 +32,6 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    
     self.collectionView.frame = self.contentView.bounds;
 }
 
@@ -43,7 +40,6 @@
     self.collectionView.dataSource = dataSourceDelegate;
     self.collectionView.delegate = dataSourceDelegate;
     self.collectionView.indexPath = indexPath;
-    [self.collectionView setContentOffset:self.collectionView.contentOffset animated:NO];
     [self.collectionView reloadData];
 }
 @end

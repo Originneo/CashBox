@@ -8,17 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "NetworkServiceProtocol.h"
-@protocol loginViewProtocol;
 
-@interface LoginViewController : UIViewController<NetworkServiceOutputProtocol>
-@property(nonatomic,weak)id<loginViewProtocol>delegate;
+
+@interface LoginViewController : UIViewController
+
 
 @end
 
-@protocol loginViewProtocol <NSObject>
-@required
 
-- (void)allDataofShopsIsReceived:(NSArray*)arrayOfShops;
-@end
 
 

@@ -12,29 +12,35 @@
 #import <QuartzCore/QuartzCore.h>
 #import "AOHistoryViewController.h"
 #import "AOCustomCollectionViewCell.h"
+#import "NetworkService.h"
 
 static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellIdentifier";
 @interface AOHomeViewController ()
-@property(nonatomic,copy)NSArray * arrayOfShops;
+@property(nonatomic,copy)NSArray *arrayOfShops;
 @property (nonatomic, strong) NSArray *colorArray;
+@property(nonatomic,strong)NSArray *sectionNames;
+
 
 @end
 
 @implementation AOHomeViewController
-
+-(void)loadView
+{
+    [super loadView];
+    [self downloadHomeViewControllerData];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-    self.arrayOfShops = @[@"Супермаркет",@"Десткий магазин",@"Магазин косметики",@"Алкогольные магазины"];
+    self.arrayOfShops = @[@"Супермаркет",@"Детский магазин",@"Магазин косметики",@"Алкогольные магазины"];
     
-    const NSInteger numberOfTableViewSections = 7;
     const NSInteger numberOfCollectionViewCells = 7;
     
-    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:numberOfTableViewSections];
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:7];
     
-    for (NSInteger tableViewRow = 0; tableViewRow < numberOfTableViewSections; tableViewRow++)
+    for (NSInteger tableViewRow = 0; tableViewRow < 7; tableViewRow++)
     {
         NSMutableArray *colorArray = [NSMutableArray arrayWithCapacity:numberOfCollectionViewCells];
         
@@ -52,13 +58,19 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     }
     
     self.colorArray = [NSArray arrayWithArray:mutableArray];
+    
 }
-
+-(void)downloadHomeViewControllerData
+{
+    NetworkService *networkService = [NetworkService new];
+    networkService.output = self;
+    [networkService takeAllDataShops];
+}
 
 #pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.arrayOfShops.count;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -95,7 +107,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.colorArray.count;
+    return 7;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -107,18 +119,32 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
     NSArray<UIColor *> *collectionViewArray = self.colorArray[[(AOCustomCollectionView *)collectionView indexPath].section];
     cell.layer.borderColor = collectionViewArray[indexPath.item].CGColor;
     cell.layer.borderWidth = 2.5f;
-    AOShopModel* shop = self.shopModelArray[indexPath.row];
-    cell.imageView.image = [UIImage imageWithData:shop.shopImage];
+    
+    if (indexPath.item < self.shopModelArray.count)
+    {
+        AOShopModel *shop = self.shopModelArray[indexPath.item];
+        UIImage *image = [UIImage imageWithData:shop.shopImage];
+        [UIView transitionWithView:cell.imageView
+                          duration:0.5f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            [cell.imageView setImage:image];
+                        } completion:nil];
+        
+        [cell.spinner stopAnimating];
+    } else {
+        [cell.spinner startAnimating];
+    }
     
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView* headerView = [[UIView alloc]init];
+    UIView *headerView = [[UIView alloc]init];
     headerView.backgroundColor =  UIColor.whiteColor;
     headerView.tintColor = UIColor.blackColor;
-    UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
     [label setFont:[UIFont fontWithName:@"AppleSDGothicNeo-Bold" size:17]];
     NSString *string = self.arrayOfShops[section];
     [label setText:string];
@@ -128,19 +154,39 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
-//    if (cell.backgroundView != nil)
-//    {
-    AOHistoryViewController* historyVC = [AOHistoryViewController new];
-//         AODetailsViewController*detailsVC = [AODetailsViewController new];
-//        detailsVC.imageView = [UIImageView new];
-//        detailsVC.nameOfImage = [UILabel new];
-//        detailsVC.nameOfImage.text =@"Hi";
-        [self.navigationController pushViewController:historyVC animated:YES];
-
-//    }
-
+    AOCustomCollectionViewCell *cell = (AOCustomCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    if (cell.imageView.image != nil)
+    {
+        AODetailsViewController *detailsVC = [AODetailsViewController new];
+        detailsVC.imageView = [UIImageView new];
+        detailsVC.nameOfImage = [UILabel new];
+        AOShopModel *shop = self.shopModelArray[indexPath.item];
+        detailsVC.imageView.image = [UIImage imageWithData:shop.shopImage];
+        detailsVC.nameOfImage.text = self.shopModelArray[indexPath.item].shopName;
+        [self.navigationController pushViewController:detailsVC animated:YES];
+    }
 }
-
+-(void)loadingIsDoneWithDataRecieved:(AOShopModel *)dataRecieved
+{
+    if (!self.shopModelArray) {
+        self.shopModelArray = [NSMutableArray new];
+    }
+    if (dataRecieved)
+    {
+        [self.shopModelArray addObject:dataRecieved];
+    }
+    NSUInteger shop = self.shopModelArray.count - 1;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:shop inSection:0];
+    [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    if (self.shopModelArray.count == 7)
+    {
+        NSMutableArray *mutableSectionNames  = [NSMutableArray new];
+        for (int i = 0 ; i<7; i++) {
+            [mutableSectionNames addObject:self.shopModelArray[i].typeOfShop];
+        }
+        self.sectionNames = [mutableSectionNames valueForKeyPath:@"@distinctUnionOfObjects.self"];
+        
+    }
+}
 
 @end

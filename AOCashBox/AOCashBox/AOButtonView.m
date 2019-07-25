@@ -8,9 +8,11 @@
 
 #import "AOButtonView.h"
 @interface AOButtonView()
-@property(nonatomic,strong,readwrite)NSString* title;
-//@property(nonatomic,strong,readwrite)NSObject* target;
+
+@property(nonatomic,strong,readwrite)NSString *title;
+
 @end
+
 @implementation AOButtonView
 
 - (instancetype)initWithTitle:(NSString *)title
@@ -31,5 +33,4 @@
     }
     return self;
 }
-
 @end

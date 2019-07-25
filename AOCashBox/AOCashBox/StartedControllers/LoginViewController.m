@@ -117,9 +117,8 @@
             [alert addAction:cancelButton];
         });
     }
-    
-    NSLog(@"HI");
 }
+
 -(void)viewWillAppear:(BOOL)animated
 {
     self.textFieldLogin.text = @"";

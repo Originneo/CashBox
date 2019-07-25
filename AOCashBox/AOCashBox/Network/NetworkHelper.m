@@ -11,7 +11,7 @@
 
 @implementation NetworkHelper
 
-+ (NSString *)URLForSearchString
++ (NSString *)URLForSearchString //Создаем ссылку для запроса
 {
     NSString *projectName = @"selfypay-19b7e";
     return [NSString stringWithFormat:@"https://%@.firebaseio.com/.json", projectName];

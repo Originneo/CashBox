@@ -24,7 +24,6 @@
     [super viewDidLoad];
     [self setupUI];
     self.view.backgroundColor = [UIColor colorWithRed:247/255. green:235/255. blue:245/255. alpha:1];
-    // Do any additional setup after loading the view.
 }
 
 
@@ -42,16 +41,14 @@
     self.navigationController.navigationBar.topItem.title = @"";
 
     //кнопка авторизации
-    
     self.loginButton = [[AOButtonView alloc]initWithTitle:@"Войти"];
     [self.loginButton addTarget:self action:@selector(enterLoginButton:) forControlEvents:UIControlEventTouchUpInside];
-    //кнопка регистрации
     
+    //кнопка регистрации
     self.registerButton = [[AOButtonView alloc]initWithTitle:@"Зарегистрироваться"];
     [self.registerButton addTarget:self action:@selector(enterRegisterButton) forControlEvents:UIControlEventTouchUpInside];
 
     //небольшая анимация в центре экрана
-
     self.strangeView = [UIView new];
     self.strangeView.frame = CGRectMake(0, 40,40,40);
     self.strangeView.backgroundColor = [UIColor blueColor];

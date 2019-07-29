@@ -70,7 +70,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
 #pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return self.arrayOfShops.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -125,7 +125,7 @@ static NSString * const AOCustomTableViewCellIdentifier = @"AOHomeTableViewCellI
         AOShopModel *shop = self.shopModelArray[indexPath.item];
         UIImage *image = [UIImage imageWithData:shop.shopImage];
         [UIView transitionWithView:cell.imageView
-                          duration:0.5f
+                          duration:0.1f
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         animations:^{
                             [cell.imageView setImage:image];

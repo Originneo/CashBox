@@ -442,11 +442,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.174819"
+            timestampString = "586129774.579501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
-            endingLineNumber = "190">
+            endingLineNumber = "190"
+            landmarkName = "-loadingIsDoneWithDataRecieved:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -456,11 +458,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.174885"
+            timestampString = "586129774.579914"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
-            endingLineNumber = "176">
+            endingLineNumber = "176"
+            landmarkName = "-loadingIsDoneWithDataRecieved:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -470,11 +474,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.174931"
+            timestampString = "586129774.58015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "160"
-            endingLineNumber = "160">
+            endingLineNumber = "160"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -484,13 +490,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.174973"
+            timestampString = "586129774.5820839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "157"
             endingLineNumber = "157"
-            landmarkName = "@implementation AOHomeViewController"
-            landmarkType = "3">
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -500,11 +506,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.175012"
+            timestampString = "586129774.5825469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
-            endingLineNumber = "188">
+            endingLineNumber = "188"
+            landmarkName = "-loadingIsDoneWithDataRecieved:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -514,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AOCashBox/TabBarControllers/AOHomeViewController.m"
-            timestampString = "586113830.175053"
+            timestampString = "586129774.582809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"

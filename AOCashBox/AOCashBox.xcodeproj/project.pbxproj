@@ -28,22 +28,15 @@
 		5BF9A0E422C7A41D00E91349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9A0E222C7A41D00E91349 /* LaunchScreen.storyboard */; };
 		5BF9A0E722C7A41D00E91349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0E622C7A41D00E91349 /* main.m */; };
 		5BF9A0F122C7A41D00E91349 /* AOCashBoxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */; };
-		5BF9A0FC22C7A41D00E91349 /* AOCashBoxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */; };
 		5BF9A1A822CFA28000E91349 /* AutorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A1A722CFA28000E91349 /* AutorizationViewController.m */; };
 		5BF9A70722E9C94A0012485B /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A70622E9C94A0012485B /* NetworkService.m */; };
 		5BF9A70A22E9CA790012485B /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A70922E9CA790012485B /* NetworkHelper.m */; };
 		5BF9A73122EF63150012485B /* AOCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A73022EF63150012485B /* AOCustomCollectionViewCell.m */; };
+		5BF9A73522F029770012485B /* unit_authtorizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF9A73422F029770012485B /* unit_authtorizationTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5BF9A0ED22C7A41D00E91349 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5BF9A0CC22C7A41B00E91349 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BF9A0D322C7A41B00E91349;
-			remoteInfo = AOCashBox;
-		};
-		5BF9A0F822C7A41D00E91349 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BF9A0CC22C7A41B00E91349 /* Project object */;
 			proxyType = 1;
@@ -92,8 +85,6 @@
 		5BF9A0E622C7A41D00E91349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOCashBoxTests.m; sourceTree = "<group>"; };
 		5BF9A0F222C7A41D00E91349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOCashBoxUITests.m; sourceTree = "<group>"; };
-		5BF9A0FD22C7A41D00E91349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF9A1A622CFA28000E91349 /* AutorizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutorizationViewController.h; sourceTree = "<group>"; };
 		5BF9A1A722CFA28000E91349 /* AutorizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutorizationViewController.m; sourceTree = "<group>"; };
 		5BF9A70022E8C2F50012485B /* AOCashBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOCashBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,9 +94,9 @@
 		5BF9A70822E9CA790012485B /* NetworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		5BF9A70922E9CA790012485B /* NetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 		5BF9A72D22EB2C910012485B /* AOCashBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOCashBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF9A72E22EB2C910012485B /* AOCashBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOCashBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF9A72F22EF63150012485B /* AOCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCustomCollectionViewCell.h; sourceTree = "<group>"; };
 		5BF9A73022EF63150012485B /* AOCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		5BF9A73422F029770012485B /* unit_authtorizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unit_authtorizationTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +108,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5BF9A0E922C7A41D00E91349 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BF9A0F422C7A41D00E91349 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,10 +223,8 @@
 			children = (
 				5BF9A0D622C7A41B00E91349 /* AOCashBox */,
 				5BF9A0EF22C7A41D00E91349 /* AOCashBoxTests */,
-				5BF9A0FA22C7A41D00E91349 /* AOCashBoxUITests */,
 				5BF9A70022E8C2F50012485B /* AOCashBox.app */,
 				5BF9A72D22EB2C910012485B /* AOCashBoxTests.xctest */,
-				5BF9A72E22EB2C910012485B /* AOCashBoxUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,17 +249,9 @@
 			children = (
 				5BF9A0F022C7A41D00E91349 /* AOCashBoxTests.m */,
 				5BF9A0F222C7A41D00E91349 /* Info.plist */,
+				5BF9A73422F029770012485B /* unit_authtorizationTests.m */,
 			);
 			path = AOCashBoxTests;
-			sourceTree = "<group>";
-		};
-		5BF9A0FA22C7A41D00E91349 /* AOCashBoxUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5BF9A0FB22C7A41D00E91349 /* AOCashBoxUITests.m */,
-				5BF9A0FD22C7A41D00E91349 /* Info.plist */,
-			);
-			path = AOCashBoxUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +278,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BF9A10322C7A41D00E91349 /* Build configuration list for PBXNativeTarget "AOCashBoxTests" */;
 			buildPhases = (
-				8FA301CA80477A2E95DD131F /* [CP] Check Pods Manifest.lock */,
 				5BF9A0E822C7A41D00E91349 /* Sources */,
 				5BF9A0E922C7A41D00E91349 /* Frameworks */,
 				5BF9A0EA22C7A41D00E91349 /* Resources */,
@@ -319,25 +292,6 @@
 			productReference = 5BF9A72D22EB2C910012485B /* AOCashBoxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5BF9A0F622C7A41D00E91349 /* AOCashBoxUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BF9A10622C7A41D00E91349 /* Build configuration list for PBXNativeTarget "AOCashBoxUITests" */;
-			buildPhases = (
-				D209ABD4E983E3FCC46979E5 /* [CP] Check Pods Manifest.lock */,
-				5BF9A0F322C7A41D00E91349 /* Sources */,
-				5BF9A0F422C7A41D00E91349 /* Frameworks */,
-				5BF9A0F522C7A41D00E91349 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5BF9A0F922C7A41D00E91349 /* PBXTargetDependency */,
-			);
-			name = AOCashBoxUITests;
-			productName = AOCashBoxUITests;
-			productReference = 5BF9A72E22EB2C910012485B /* AOCashBoxUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -351,10 +305,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 					};
 					5BF9A0EB22C7A41D00E91349 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 5BF9A0D322C7A41B00E91349;
-					};
-					5BF9A0F622C7A41D00E91349 = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 5BF9A0D322C7A41B00E91349;
 					};
@@ -375,7 +325,6 @@
 			targets = (
 				5BF9A0D322C7A41B00E91349 /* AOCashBox */,
 				5BF9A0EB22C7A41D00E91349 /* AOCashBoxTests */,
-				5BF9A0F622C7A41D00E91349 /* AOCashBoxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,61 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BF9A0F522C7A41D00E91349 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8FA301CA80477A2E95DD131F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AOCashBoxTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D209ABD4E983E3FCC46979E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AOCashBoxUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BF9A0D022C7A41B00E91349 /* Sources */ = {
@@ -487,15 +382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF9A73522F029770012485B /* unit_authtorizationTests.m in Sources */,
 				5BF9A0F122C7A41D00E91349 /* AOCashBoxTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BF9A0F322C7A41D00E91349 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BF9A0FC22C7A41D00E91349 /* AOCashBoxUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,11 +394,6 @@
 			isa = PBXTargetDependency;
 			target = 5BF9A0D322C7A41B00E91349 /* AOCashBox */;
 			targetProxy = 5BF9A0ED22C7A41D00E91349 /* PBXContainerItemProxy */;
-		};
-		5BF9A0F922C7A41D00E91349 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5BF9A0D322C7A41B00E91349 /* AOCashBox */;
-			targetProxy = 5BF9A0F822C7A41D00E91349 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -706,42 +589,6 @@
 			};
 			name = Release;
 		};
-		5BF9A10722C7A41D00E91349 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S2F4GCL3;
-				INFOPLIST_FILE = AOCashBoxUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Sber.AOCashBoxUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AOCashBox;
-			};
-			name = Debug;
-		};
-		5BF9A10822C7A41D00E91349 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S2F4GCL3;
-				INFOPLIST_FILE = AOCashBoxUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Sber.AOCashBoxUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AOCashBox;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,15 +615,6 @@
 			buildConfigurations = (
 				5BF9A10422C7A41D00E91349 /* Debug */,
 				5BF9A10522C7A41D00E91349 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5BF9A10622C7A41D00E91349 /* Build configuration list for PBXNativeTarget "AOCashBoxUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5BF9A10722C7A41D00E91349 /* Debug */,
-				5BF9A10822C7A41D00E91349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

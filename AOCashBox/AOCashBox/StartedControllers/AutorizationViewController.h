@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LoginViewController.h"
+#import "RegistrationViewController.h"
+#import "AOButtonView.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol AOAutorizationViewControllerOutput;
@@ -16,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AutorizationViewController : UIViewController
 
 @property (nonatomic, weak) id<AOAutorizationViewControllerOutput> output;
+@property(nonatomic,strong)UIButton *loginButton;
+@property(nonatomic,strong)UIButton *registerButton;
 
 @end
 

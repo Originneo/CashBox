@@ -8,14 +8,11 @@
 
 #import "RegistrationViewController.h"
 #import "LoginViewController.h"
-#import "AOTextFieldView.h"
 #import "AOButtonView.h"
 #import "AOCoordinateViewController.h"
 
 @interface RegistrationViewController ()<UITextFieldDelegate>
 @property(nonatomic,strong) AOTextFieldView *textFieldLogin;
-@property(nonatomic,strong) AOTextFieldView *textFieldPassword;
-@property(nonatomic,strong) AOTextFieldView *textFieldRepeatPassword;
 @property(nonatomic,strong)AOCoordinateViewController *coord;
 @property(nonatomic,strong)UIButton *loginButton;
 @end

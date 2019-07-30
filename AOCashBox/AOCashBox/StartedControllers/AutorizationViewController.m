@@ -7,13 +7,10 @@
 //
 
 #import "AutorizationViewController.h"
-#import "LoginViewController.h"
-#import "RegistrationViewController.h"
-#import "AOButtonView.h"
+
 @interface AutorizationViewController ()
+
 @property(nonatomic,strong)UILabel *label;
-@property(nonatomic,strong)UIButton *loginButton;
-@property(nonatomic,strong)UIButton *registerButton;
 @property(nonatomic,strong)UIView *strangeView;
 
 @end
@@ -31,7 +28,6 @@
 
 -(void)setupUI
 {
-   
     //лейбл
     self.label = [[UILabel alloc]init];
     UIFont *theRegularFont = [UIFont fontWithName:@"AppleSDGothicNeo-Bold" size:50];
